@@ -1,0 +1,18 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+dep_with = "JEJ251VV1GR7WV8oxDudpv5tLDmg2zYgUsC9d3YSm3Kh"
+
+[registry]
+url = "https://api.devnet.solana.com/"
+
+[provider]
+cluster = "devnet"
+wallet = "./depwith.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
